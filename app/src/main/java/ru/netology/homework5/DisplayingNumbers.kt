@@ -1,24 +1,22 @@
 package ru.netology.homework5
 
-import android.widget.TextView
-import ru.netology.homework5.dto.Post
 
-fun DisplayingNumbers (number:Long):String{
-    var numberToText=number.toString()
-    if (number>= 1000) {
+fun DisplayingNumbers(number: Long): String {
+    var numberToText = number.toString()
+    if (number >= 1000) {
 
-        numberToText= "%.1f".format(
+        numberToText = "%.1f".format(
             (number.toDouble() / 1000)
         ) + "K "
     }
     if (number >= 10_000) {
 
-        numberToText= "%.0f".format(
+        numberToText = "%.0f".format(
             (number.toDouble() / 1000)
         ) + "K "
     }
     if (number >= 1000_000) {
-        numberToText= "%.1f".format(
+        numberToText = "%.1f".format(
             (number.toDouble() / 1000_000)
         ) + "МЛН "
 
@@ -29,5 +27,5 @@ fun DisplayingNumbers (number:Long):String{
         ) + "МЛД"
 
     }
-    return  numberToText
+    return numberToText
 }
